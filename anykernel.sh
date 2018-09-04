@@ -42,10 +42,10 @@ die() {
 }
 
 
-# Don't even think about flashing on Treble
+# Do not flash this on non-Treble
 treble=$(file_getprop /system/build.prop "ro.treble.enabled");
-if [ ! -z $treble -a $treble == "true" ]; then
-  die "Flash Kernel is not compatible with Treble yet!";
+if [ ! -z $treble -a $treble != "true" ]; then
+  die "ReverseFlash Kernel is not compatible with non-Treble!";
 fi;
 
 
