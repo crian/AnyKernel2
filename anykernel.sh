@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Flash Kernel for the OnePlus 5/T by @nathanchance
+kernel.string=ReverseFlash Kernel by crian @ xda-developers
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
@@ -87,8 +87,8 @@ dump_boot;
 # Set the default background app limit to 60
 insert_line default.prop "ro.sys.fw.bg_apps_limit=60" before "ro.secure=1" "ro.sys.fw.bg_apps_limit=60";
 
-# Import init.flash.rc file
-insert_line init.rc "init.flash.rc" after "import /init.usb.rc" "import /init.flash.rc";
+# Import init.reverseflash.rc file
+insert_line init.rc "init.reverseflash.rc" after "import /init.usb.rc" "import /init.reverseflash.rc";
 
 # If on OOS, we need the support to load the Wi-Fi module
 if [ "$os" == "oos" ]; then
@@ -106,8 +106,8 @@ if [ "$os" == "oos" ]; then
     "allow init { system_file vendor_file vendor_configs_file } file mounton" \
   ;
 
-  # Patch init.flash.rc to bind mount the Wi-Fi module on OxygenOS
-  prepend_file init.flash.rc "modules" modules;
+  # Patch init.reverseflash.rc to bind mount the Wi-Fi module on OxygenOS
+  prepend_file init.reverseflash.rc "modules" modules;
 
   # Remove recovery service so that TWRP isn't overwritten
   remove_section init.rc "service flash_recovery" ""
