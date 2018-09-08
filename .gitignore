@@ -1,1 +1,2 @@
-version
+kernels/oos/Image.gz-dtb
+ramdisk/modules/wlan.ko
