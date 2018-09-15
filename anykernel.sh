@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=ReverseFlash Kernel by crian @ xda-developers
+kernel.string=Reverse Flash Kernel by crian @ xda-developers
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
@@ -45,7 +45,7 @@ die() {
 # Do not flash this on non-Treble
 treble=$(file_getprop /system/build.prop "ro.treble.enabled");
 if [ ! -z $treble -a $treble != "true" ]; then
-  die "ReverseFlash Kernel is not compatible with non-Treble!";
+  die "Reverse Flash Kernel is not compatible with non-Treble!";
 fi;
 
 
@@ -142,4 +142,3 @@ write_boot;
 
 
 ## end install
-
