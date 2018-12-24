@@ -38,6 +38,8 @@ dump_boot;
 
 # begin ramdisk changes
 
+# Remove recovery service so that TWRP isn't overwritten
+remove_section init.rc "service flash_recovery" ""
 
 # end ramdisk changes
 
