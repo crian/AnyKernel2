@@ -4,21 +4,20 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=ExampleKernel by osm0sis @ xda-developers
+kernel.string=KronicKernel by crian @ xda-developers
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=maguro
-device.name2=toro
-device.name3=toroplus
-device.name4=
-device.name5=
-supported.versions=
+device.name1=OnePlus5
+device.name2=OnePlus5T
+device.name3=cheeseburger
+device.name4=dumpling
+supported.versions=9
 '; } # end properties
 
 # shell variables
-block=/dev/block/platform/omap/omap_hsmmc.0/by-name/boot;
+block=boot;
 is_slot_device=0;
 ramdisk_compression=auto;
 
