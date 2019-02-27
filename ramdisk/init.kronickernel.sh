@@ -30,6 +30,13 @@ echo 128 > /sys/block/sdf/queue/read_ahead_kb
 echo 1 > /sys/block/sdf/queue/iostats
 echo 128 > /sys/block/sdf/queue/nr_requests
 
+# Set cpu input boost
+echo 100 > /sys/module/cpu_input_boost/parameters/input_boost_duration
+echo 979200 > /sys/module/cpu_input_boost/parameters/input_boost_freq_hp
+echo 960000 > /sys/module/cpu_input_boost/parameters/input_boost_freq_lp
+echo 300000 > /sys/module/cpu_input_boost/parameters/remove_input_boost_freq_hp
+echo 300000 > /sys/module/cpu_input_boost/parameters/remove_input_boost_freq_lp
+
 # Set dynamic stune boost
 echo 15 > /sys/module/cpu_input_boost/parameters/dynamic_stune_boost
 
