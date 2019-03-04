@@ -44,6 +44,3 @@ echo 15 > /sys/module/cpu_input_boost/parameters/dynamic_stune_boost
 echo 65 > /proc/sys/vm/swappiness
 echo 5 > /proc/sys/vm/dirty_ratio
 echo 2 > /proc/sys/vm/dirty_background_ratio
-
-# Set dt2w
-echo 1 > /sys/android_touch/doubletap2wake
