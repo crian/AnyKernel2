@@ -41,6 +41,7 @@ echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
 echo "70 672000:45 825600:50 1036800:60 1248000:70 1478400:85" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 echo 40000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
 echo 30000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
+echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/enable_prediction
 
 echo 99 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
 echo 1574400 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
@@ -49,6 +50,7 @@ echo "85 1728000:80 2112000:90 2342400:95" > /sys/devices/system/cpu/cpu4/cpufre
 echo 30000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
 echo 19000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
 echo 39000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
+echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/enable_prediction
 
 # Adjust lmk
 echo "18432,23040,27648,32256,55296,80640" > /sys/module/lowmemorykiller/parameters/minfree
